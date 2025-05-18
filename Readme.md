@@ -1,7 +1,5 @@
 # TargetLock: Real-Time Target Detection & Tracking in Drone Feeds
 
-![TargetLock Banner](https://via.placeholder.com/800x200?text=TargetLock+Drone+Target+Detection)
-
 TargetLock is a powerful computer vision system designed to detect, track, and log objects of interest in aerial drone footage. Using advanced computer vision techniques, it provides real-time identification and persistent tracking of targets across video frames.
 
 ## Features
@@ -10,7 +8,6 @@ TargetLock is a powerful computer vision system designed to detect, track, and l
 - **Persistent Tracking**: Assigns unique IDs to detected targets and tracks them across frames
 - **Automatic Target Extraction**: Saves cropped images of detected targets for further analysis
 - **Real-time Visual Feedback**: Displays detection status, bounding boxes, and tracking IDs
-- **YouTube Support**: Process videos directly from YouTube links
 - **Debug Mode**: Visualize the detection process with multiple visual filters
 - **Duplicate Filtering**: Smart algorithms to prevent multiple detections of the same target
 
@@ -21,12 +18,10 @@ TargetLock is a powerful computer vision system designed to detect, track, and l
 - NumPy
 - SciPy
 - imutils
-- (Optional) pafy and youtube-dl for YouTube video processing
 
 Install dependencies with:
 ```bash
 pip install opencv-python numpy scipy imutils
-pip install pafy youtube-dl  # Optional: for YouTube processing
 ```
 
 ## Usage
@@ -36,24 +31,9 @@ pip install pafy youtube-dl  # Optional: for YouTube processing
 python targetlock.py -v path/to/video.mp4
 ```
 
-### YouTube Video Processing
-```bash
-python targetlock.py -v https://youtu.be/D_ayxRYQap0 -y
-```
-
 ### Enable Debug Mode
 ```bash
 python targetlock.py -v path/to/video.mp4 -d
-```
-
-### All Options
-```
-arguments:
-  -h, --help            show this help message and exit
-  -v VIDEO, --video VIDEO
-                        Path to input video file or YouTube URL
-  -d, --debug           Enable debug mode to visualize detection process
-  -y, --youtube         Video source is a YouTube URL
 ```
 
 ## How It Works
